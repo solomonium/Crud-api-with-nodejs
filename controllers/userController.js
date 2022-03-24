@@ -5,13 +5,13 @@ function getUserDetails(req,res,){
   let message = req.body.message;
   let age = req.body.age;
   let date = req.body.date
-  let student = new User({
+  let user = new User({
     name,
     message,
     age,
     date
   })
-  student.save().then((data)=>{
+  user.save().then((data)=>{
     res.send(data)
   })
 }
